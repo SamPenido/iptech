@@ -1,0 +1,793 @@
+
+@import "footer.css";
+
+
+:root {
+    --primary-color: #000000; /* Cor primária para texto */
+    --secondary-color: #8f0188; /* Cor secundária para destaque */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.767); /* fundo semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* para garantir que esteja acima de todo o conteúdo */
+}
+
+.loader {
+  border: 16px solid #13042b; /* Cinza claro */
+  border-top: 16px solid hwb(318 11% 35%); /* Azul */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite; /* Animação de rotação */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+body {
+    background: linear-gradient(-45deg, #cccbcb, #dddbdb, #8f0188, #e696ff);
+    background-size: 500% 1300%;
+    animation: gradient 7s ease infinite;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradient {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.check {
+    max-width: 60%; /* Aumentei a largura máxima para uma aparência mais espaçosa */
+    margin: 100px auto; /* Reduzi a margem superior para uma aparência mais compacta */
+    padding: 90px; /* Aumentei o preenchimento para mais espaço interno */
+    background-color: #dbdbdb; /* Fundo cinza suave */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+    color: var(--primary-color); /* Texto em cor primária */
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.check h3, .check h4, .check h5 {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.check h6 {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.check h1 {
+    color: var(--secondary-color);
+    font-weight: 600;
+
+}
+
+.check h2 {
+    color: var(--secondary-color);
+    font-size: 25px; 
+    font-weight: 600;
+    margin: 50px 0; /* Reduzi o espaçamento superior */
+}
+
+.check h1 { font-size: 37px; margin: 20px 0; }
+.check h4 { font-size: 30px; margin-bottom: 20px; }
+
+.check h5 {
+    font-size: 23px;
+    margin: 90px 0;
+    font-weight: 600;
+
+}
+
+.check p { 
+    text-align: left;
+    font-weight: 600;
+    margin: 10%;
+    font-size: 22px;
+    margin-top: 90px auto ; /* Reduzi o espaçamento superior */
+}
+
+.check ul {
+    list-style-type: none;
+    margin-top: 30px;
+}
+
+.check li {
+  font-weight: 600;
+
+    margin: 100px auto; /* Centraliza horizontalmente e define margens superior e inferior */
+    padding: 20px;
+    background-color: #ececec;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.37);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 90%;
+}
+
+.check li h4 {
+    margin-bottom: 100px; /* Adicionei um espaço entre o título e o texto */
+}
+
+
+.check li:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 8px 12px rgba(87, 87, 87, 0.89); /* Sombras suaves */
+}
+
+
+.check li p {
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.check a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.check a:hover {
+    text-decoration: underline;
+}
+
+.img-service img {
+  display: block;
+  margin: 70px auto; /* Centralize horizontalmente */
+  max-width: 700px;
+  border-radius: 20px;
+}
+
+.img-check img {
+    display: block;
+    margin: 0 auto; /* Centralize horizontalmente */
+    max-width: 300px;
+}
+
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .check {
+        max-width: 90%;
+        padding: 30px;
+    }
+
+    .check h1 { font-size: 25px; }
+    .check h2 { font-size: 20px; }
+    .check h5 { font-size: 16px; margin: 20px 0; }
+    .check p { font-size: 16px; }
+    .check li { margin: 30px 0; }
+    .check li p { font-size: 14px; }
+}
+
+.btn {
+    margin: 0 auto 100px auto; /* Adicionado o 'auto' nos lados direito e esquerdo */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 29rem;
+    height: 7rem;
+    background-size: 400% 400%;
+    backdrop-filter: blur(1rem);
+    border-radius: 5rem;
+    transition: 0.5s;
+    animation: gradient_301 5s ease infinite;
+    border: double 4px transparent;
+    background-image: linear-gradient(#212121, #212121),
+      linear-gradient(
+        137.48deg,
+        #46a4e2 10%,
+        #fe53bb 45%,
+        #6c20dd 67%,
+        #ffffff 10%
+      );
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+  }
+  
+  #container-stars {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(1rem);
+    border-radius: 5rem;
+  }
+  
+  strong {
+    z-index: 2;
+    font-size: 17px;
+    letter-spacing: 5px;
+    color: #ffffff;
+    text-shadow: 0 0 4px white;
+    align-items: center;
+    
+  }
+  
+  #glow {
+    position: absolute;
+    display: flex;
+    width: 12rem;
+  }
+  
+  .circle {
+    width: 100%;
+    height: 30px;
+    filter: blur(2rem);
+    animation: pulse_3011 4s infinite;
+    z-index: -1;
+  }
+  
+  .circle:nth-of-type(1) {
+    background: rgba(254, 83, 186, 0.636);
+  }
+  
+  .circle:nth-of-type(2) {
+    background: rgba(142, 81, 234, 0.704);
+  }
+  
+  .btn:hover #container-stars {
+    z-index: 1;
+    background-color: #212121;
+  }
+  
+  .btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .btn:active {
+    border: double 4px #fe53bb;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    animation: none;
+  }
+  
+  .btn:active .circle {
+    background: #fe53bb;
+  }
+  
+  #stars {
+    position: relative;
+    background: transparent;
+    width: 200rem;
+    height: 200rem;
+  }
+  
+  #stars::after {
+    content: "";
+    position: absolute;
+    top: -10rem;
+    left: -100rem;
+    width: 100%;
+    height: 100%;
+    animation: animStarRotate 90s linear infinite;
+  }
+  
+  #stars::after {
+    background-image: radial-gradient(#ffffff 1px, transparent 1%);
+    background-size: 50px 50px;
+  }
+  
+  #stars::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 170%;
+    height: 500%;
+    animation: animStar 60s linear infinite;
+  }
+  
+  #stars::before {
+    background-image: radial-gradient(#ffffff 1px, transparent 1%);
+    background-size: 50px 50px;
+    opacity: 0.5;
+  }
+  
+  @keyframes animStar {
+    from {
+      transform: translateY(0);
+    }
+  
+    to {
+      transform: translateY(-135rem);
+    }
+  }
+  
+  @keyframes animStarRotate {
+    from {
+      transform: rotate(360deg);
+    }
+  
+    to {
+      transform: rotate(0);
+    }
+  }
+  
+  @keyframes gradient_301 {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes pulse_3011 {
+    0% {
+      transform: scale(0.75);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+  
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+  
+    100% {
+      transform: scale(0.75);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+  
+  
+  @keyframes lights {
+    0% {
+      color: hsl(230, 40%, 80%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+    
+    30% { 
+      color: hsl(230, 80%, 90%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    40% { 
+      color: hsl(230, 100%, 95%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 90%, 0.5),
+        -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+        0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    70% {
+      color: hsl(230, 80%, 90%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    100% {
+      color: hsl(230, 40%, 80%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+    
+  }
+  .animate-charcter
+  {
+     text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      #ffffff 100%
+      #231557 10%,
+      #ec7da2 67%,
+      #fff800 70%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-emphasis-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 60px;
+    margin-bottom: 20px;
+    margin-top: 90px;
+  }
+  
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+  
+
+.ip {
+	width: 200px;
+	color: #000;
+	text-align: center;
+	font-size: 25px;
+	font-weight: 900;
+	border-radius: 20px;
+	align-items: center;
+  }
+  
+  .ip a {
+	color: #000; /* Define a cor do link como preto */
+	text-decoration: none; /* Remove o sublinhado padrão dos links */
+  }
+  
+@font-face {
+  font-family: 'Garet Heavy';
+  src: url('/fonts/Garet-Heavy.otf') format('opentype');
+}
+
+
+.social-links a{
+  margin-top: 10px;
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(54, 54, 54, 0.774);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.social-links a:hover{
+	color: #ffffff;
+	background: linear-gradient(180deg, #a048a8, #433edd63, #7c21b1);
+}
+
+@media (max-width: 400px) {
+  .check {
+    margin: 50px auto; /* Ajuste a margem superior e inferior */
+    padding: 20px; /* Reduza o preenchimento */
+    border-radius: 15px; /* Ajuste o raio da borda */
+    max-width: 90%; /* Reduza a largura máxima */
+  }
+
+  .check h1 {
+    font-size: 22px; /* Ajuste o tamanho da fonte */
+  }
+
+  .check h2 {
+    font-size: 20px; /* Ajuste o tamanho da fonte */
+    margin: 30px 0; /* Ajuste a margem superior e inferior */
+  }
+
+  .check h5 {
+    font-size: 17px; /* Ajuste o tamanho da fonte */
+    margin: 10px 0; /* Ajuste a margem superior e inferior */
+  }
+
+  .check p {
+    font-size: 16px; /* Ajuste o tamanho da fonte */
+    margin: 20px 0; /* Ajuste a margem superior e inferior */
+  }
+
+  .check li {
+    margin: 20px auto; /* Centralize verticalmente e ajuste a margem */
+    padding: 15px; /* Reduza o preenchimento */
+    max-width: 100%; /* Garanta que a largura máxima seja 100% */
+  }
+
+  .check li h4 {
+    margin-top: 20px; /* Ajuste a margem superior */
+    margin-bottom: 20px; /* Ajuste a margem inferior */
+  }
+
+  .check li p {
+    font-size: 16px; /* Ajuste o tamanho da fonte */
+  }
+
+  .img-check img {
+    max-width: 200px; /* Ajuste a largura máxima da imagem */
+    margin: 40px auto; /* Centralize horizontalmente e ajuste a margem */
+  }
+  .img-service img {
+    max-width: 80%; /* Ajuste a largura máxima da imagem */
+    margin: 0px auto; /* Centralize horizontalmente e ajuste a margem */
+  }
+
+  .btn {
+    width: 80%; /* Reduza a largura do botão */
+    height: 5rem; /* Ajuste a altura do botão */
+    border-radius: 2.5rem; /* Ajuste o raio da borda do botão */
+    margin: 0 auto 50px auto; /* Ajuste a margem superior e inferior */
+  }
+
+  .circle {
+    width: 90%; /* Ajuste a largura do círculo */
+    border-radius: 2.5rem; /* Ajuste o raio da borda do círculo */
+  }
+}
+
+@media (max-width: 500px) {
+  .check {
+    margin: 50px auto; /* Ajuste a margem superior e inferior */
+    padding: 20px; /* Reduza o preenchimento */
+    border-radius: 15px; /* Ajuste o raio da borda */
+    max-width: 90%; /* Reduza a largura máxima */
+  }
+
+  .check h1 {
+    font-size: 22px; /* Ajuste o tamanho da fonte */
+  }
+
+  .check h2 {
+    font-size: 20px; /* Ajuste o tamanho da fonte */
+    margin: 30px 0; /* Ajuste a margem superior e inferior */
+  }
+
+  .check h5 {
+    font-size: 14px; /* Ajuste o tamanho da fonte */
+    margin: 10px 0; /* Ajuste a margem superior e inferior */
+  }
+
+  .check li h5 {
+    font-size: 17px; /* Ajuste o tamanho da fonte */
+    margin: 10px 0; /* Ajuste a margem superior e inferior */
+  }
+
+  .check p {
+    font-size: 16px; /* Ajuste o tamanho da fonte */
+    margin: 20px 0; /* Ajuste a margem superior e inferior */
+  }
+
+  .check li {
+    margin: 20px auto; /* Centralize verticalmente e ajuste a margem */
+    padding: 15px; /* Reduza o preenchimento */
+    max-width: 100%; /* Garanta que a largura máxima seja 100% */
+  }
+
+  .check li h4 {
+    margin-top: 20px; /* Ajuste a margem superior */
+    margin-bottom: 20px; /* Ajuste a margem inferior */
+  }
+
+  .check li p {
+    font-size: 16px; /* Ajuste o tamanho da fonte */
+  }
+
+  .img-check img {
+    max-width: 200px; /* Ajuste a largura máxima da imagem */
+    margin: 40px auto; /* Centralize horizontalmente e ajuste a margem */
+  }
+  .img-service img {
+    max-width: 300px; /* Ajuste a largura máxima da imagem */
+    margin: 20px auto; /* Centralize horizontalmente e ajuste a margem */
+  }
+
+  .btn {
+    width: 80%; /* Reduza a largura do botão */
+    height: 5rem; /* Ajuste a altura do botão */
+    border-radius: 2.5rem; /* Ajuste o raio da borda do botão */
+    margin: 0 auto 50px auto; /* Ajuste a margem superior e inferior */
+  }
+
+  .circle {
+    width: 90%; /* Ajuste a largura do círculo */
+    border-radius: 2.5rem; /* Ajuste o raio da borda do círculo */
+  }
+}
+
+@media (max-width: 800px) {
+  .check {
+    margin: 50px auto; /* Ajuste a margem superior e inferior */
+    padding: 20px; /* Reduza o preenchimento */
+    border-radius: 15px; /* Ajuste o raio da borda */
+    max-width: 90%; /* Reduza a largura máxima */
+  }
+
+  .check h1 {
+    font-size: 22px; /* Ajuste o tamanho da fonte */
+  }
+
+  .check h2 {
+    font-size: 20px; /* Ajuste o tamanho da fonte */
+    margin: 30px 0; /* Ajuste a margem superior e inferior */
+  }
+
+  .check h5 {
+    font-size: 14px; /* Ajuste o tamanho da fonte */
+    margin: 10px 0; /* Ajuste a margem superior e inferior */
+  }
+
+  .check p {
+    font-size: 16px; /* Ajuste o tamanho da fonte */
+    margin: 20px 0; /* Ajuste a margem superior e inferior */
+  }
+
+  .check li {
+    margin: 20px auto; /* Centralize verticalmente e ajuste a margem */
+    padding: 15px; /* Reduza o preenchimento */
+    max-width: 100%; /* Garanta que a largura máxima seja 100% */
+  }
+
+  .check li h4 {
+    margin-top: 20px; /* Ajuste a margem superior */
+    margin-bottom: 20px; /* Ajuste a margem inferior */
+  }
+
+  .check li p {
+    font-size: 16px; /* Ajuste o tamanho da fonte */
+  }
+
+  .img-check img {
+    max-width: 200px; /* Ajuste a largura máxima da imagem */
+    margin: 40px auto; /* Centralize horizontalmente e ajuste a margem */
+  }
+
+  .btn {
+    width: 80%; /* Reduza a largura do botão */
+    height: 5rem; /* Ajuste a altura do botão */
+    border-radius: 2.5rem; /* Ajuste o raio da borda do botão */
+    margin: 0 auto 50px auto; /* Ajuste a margem superior e inferior */
+  }
+
+  .circle {
+    width: 90%; /* Ajuste a largura do círculo */
+    border-radius: 2.5rem; /* Ajuste o raio da borda do círculo */
+  }
+}
+@media (max-width: 900px) {
+  .check {
+    margin: 50px auto; /* Ajuste a margem superior e inferior */
+    padding: 20px; /* Reduza o preenchimento */
+    border-radius: 15px; /* Ajuste o raio da borda */
+    max-width: 90%; /* Reduza a largura máxima */
+  }
+
+  .check h1 {
+    font-size: 22px; /* Ajuste o tamanho da fonte */
+  }
+
+  .check h2 {
+    font-size: 20px; /* Ajuste o tamanho da fonte */
+    margin: 30px 0; /* Ajuste a margem superior e inferior */
+  }
+
+  .check h5 {
+    font-size: 14px; /* Ajuste o tamanho da fonte */
+    margin: 10px 0; /* Ajuste a margem superior e inferior */
+  }
+
+  .check p {
+    font-size: 16px; /* Ajuste o tamanho da fonte */
+    margin: 20px 0; /* Ajuste a margem superior e inferior */
+  }
+
+  .check li {
+    margin: 20px auto; /* Centralize verticalmente e ajuste a margem */
+    padding: 15px; /* Reduza o preenchimento */
+    max-width: 100%; /* Garanta que a largura máxima seja 100% */
+  }
+
+  .check li h4 {
+    margin-top: 20px; /* Ajuste a margem superior */
+    margin-bottom: 20px; /* Ajuste a margem inferior */
+  }
+
+  .check li p {
+    font-size: 16px; /* Ajuste o tamanho da fonte */
+  }
+
+  .img-check img {
+    max-width: 200px; /* Ajuste a largura máxima da imagem */
+    margin: 40px auto; /* Centralize horizontalmente e ajuste a margem */
+  }
+
+  .btn {
+    width: 80%; /* Reduza a largura do botão */
+    height: 5rem; /* Ajuste a altura do botão */
+    border-radius: 2.5rem; /* Ajuste o raio da borda do botão */
+    margin: 0 auto 50px auto; /* Ajuste a margem superior e inferior */
+  }
+
+  .circle {
+    width: 90%; /* Ajuste a largura do círculo */
+    border-radius: 2.5rem; /* Ajuste o raio da borda do círculo */
+  }
+}
+@media (max-width: 1200px) {
+  .check {
+    margin: 50px auto; /* Ajuste a margem superior e inferior */
+    padding: 20px; /* Reduza o preenchimento */
+    border-radius: 15px; /* Ajuste o raio da borda */
+    max-width: 90%; /* Reduza a largura máxima */
+  }
+
+  .check h1 {
+    font-size: 22px; /* Ajuste o tamanho da fonte */
+  }
+
+  .check h2 {
+    font-size: 20px; /* Ajuste o tamanho da fonte */
+    margin: 30px 0; /* Ajuste a margem superior e inferior */
+  }
+
+  .check h5 {
+    font-size: 14px; /* Ajuste o tamanho da fonte */
+    margin: 10px 0; /* Ajuste a margem superior e inferior */
+  }
+
+  .check p {
+    font-size: 16px; /* Ajuste o tamanho da fonte */
+    margin: 20px 0; /* Ajuste a margem superior e inferior */
+  }
+
+  .check li {
+    margin: 20px auto; /* Centralize verticalmente e ajuste a margem */
+    padding: 15px; /* Reduza o preenchimento */
+    max-width: 100%; /* Garanta que a largura máxima seja 100% */
+  }
+
+  .check li h4 {
+    margin-top: 20px; /* Ajuste a margem superior */
+    margin-bottom: 20px; /* Ajuste a margem inferior */
+  }
+
+  .check li p {
+    font-size: 16px; /* Ajuste o tamanho da fonte */
+  }
+
+  .img-check img {
+    max-width: 200px; /* Ajuste a largura máxima da imagem */
+    margin: 40px auto; /* Centralize horizontalmente e ajuste a margem */
+  }
+
+  .btn {
+    width: 80%; /* Reduza a largura do botão */
+    height: 5rem; /* Ajuste a altura do botão */
+    border-radius: 2.5rem; /* Ajuste o raio da borda do botão */
+    margin: 0 auto 50px auto; /* Ajuste a margem superior e inferior */
+  }
+
+  .circle {
+    width: 90%; /* Ajuste a largura do círculo */
+    border-radius: 2.5rem; /* Ajuste o raio da borda do círculo */
+  }
+}

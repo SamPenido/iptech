@@ -1,0 +1,58 @@
+.ip {
+	width: 200px;
+	color: #000;
+	text-align: center;
+	font-size: 25px;
+	font-weight: 900;
+	border-radius: 20px;
+	margin-bottom: 10px; /* Adiciona margem inferior */
+  }
+  
+  .ip a {
+	color: #000;
+	text-decoration: none;
+  }
+  
+  @font-face {
+	font-family: 'Garet Heavy';
+	src: url('/fonts/Garet-Heavy.otf') format('opentype');
+  }
+  
+  .social-links {
+	text-align: center;
+  }
+  
+  .social-links a {
+	margin-top: 10px;
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(54, 54, 54, 0.774);
+	margin-right: 10px; /* Adiciona margem à direita */
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+  }
+  
+  .social-links a:last-child {
+	margin-right: 0; /* Remove a margem à direita do último link */
+  }
+  
+  .social-links a:hover {
+	color: #ffffff;
+	background: linear-gradient(180deg, #a048a8, #433edd63, #7c21b1);
+  }
+  
+  /* Adiciona flexbox para alinhar .ip e .social-links */
+  @media (max-width: 400px) {
+	.ip,
+	.social-links {
+	  display: flex;
+	  justify-content: flex-start; /* Alinha à esquerda */
+	  align-items: center; /* Centraliza verticalmente */
+	  flex-wrap: wrap; /* Quebra linha se necessário */
+	}
+  }
+  
